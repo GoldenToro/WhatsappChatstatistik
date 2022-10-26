@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Google Charts -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	<!-- Wordcloud stuff -->
+	<script src="https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js"></script>
+	<script src="echarts-wordcloud.js"></script
+
+	
+	<!-- my library -->
+	<link rel="stylesheet" href="style.css">
+	<script src="statistik.js"></script>
+</head>
+
+<body>
+	<div id="containerAll">
+	
+		<div class="input-group mb-3" id="containerActions">
+		<div id="wait">Kann bis zu 3 Minuten pro Jahr laden </div>
+			<div id="Upload_Action" class="input-group-prepend">
+				<form action="/action_page.php">
+				  <input type="file" id="txtfiletoread" name="pic" accept=".txt">
+				  <button type="button" class="form-control" onclick="startStatistik()">Starten?</button>
+				</form>
+			</div>
+		</div>		
+		
+		<div class="loader" id="laden" ></div>
+			
+		<div id="daStatistik">
+			
+			<div id="containerTitle">Ein Jahr Wir ...</div> 
+				
+			<div id="containerStatisticCount">
+				<h2 style="text-align: center;"> ... in Zahlen</h2>
+				
+				<div class="Count" id="Count_Since">Zeitraum: <br>
+					<div id="Count_Since_Data" style="text-align: center; font-size: 30px;"> 34.34.3421</div>
+				</div>
+				
+				<div class="Count" id="Count_Days">Dauer: <br>
+					<div id="Count_Days_Data"  style="text-align: center; font-size: 30px;"> </div>
+				</div>
+				
+				<div class="Count" id="Count_Messages">Nachrichten: <br>
+					<div id="Count_Messages_Data"  style="text-align: center; font-size: 30px;"> </div>
+				</div>	
+				
+				<div class="Count" id="Count_Words">Wörter: <br>
+					<div id="Count_Words_Data"  style="text-align: center; font-size: 30px;"> </div>
+				</div>
+				
+				<div class="Count" id="Count_MostActiveDay">Aktivster Tag: <br>
+					<div id="Count_MostActiveDay_Data"  style="text-align: center; font-size: 30px;"> </div>
+					<div id="Count_MostActiveWords_Data"  style="text-align: center; font-size: 20px;"> </div>
+				</div>		
+				
+				<div class="Count" id="Count_Links">Anzahl an Links: <br>
+					<div id="Count_Links_Data"  style="text-align: center; font-size: 30px;"> </div>
+					<div id="Count_Jodel_Data"  style="text-align: center; font-size: 20px;"> </div>
+				</div>
+			</div>
+		
+			<div id="containerStatisticProp">
+				<div id="Prop_Chats">
+				</div>	
+				<div id="Prop_Words">
+				</div>
+			</div>	
+			
+			<div id="containerStatistic_Year">
+			</div>
+			
+			<div id="containerStatistic_Month">
+			</div>
+			
+			<div id="containerStatistic_Day">
+			</div>
+			
+			<div id="containerStatistic_Hour">
+			</div>
+
+			<div id="containerStatistic_Media">
+			</div>
+			
+			<div id="containerStatistic_Count">
+			</div>
+			
+			<div id="containerStatistic_CountMore">
+			</div>
+			
+			<div id="containerStatistic_WordCloud">
+				
+			</div>
+			
+		
+		</div>
+			
+	</div>	
+				
+	<div id="filecontents" style="display:none; position:absolute; top:19%; left:50%; height:81%; width:50%; z-index:10;"> 
+	</div>
+		
+</body>
+
+
+</html>
+
